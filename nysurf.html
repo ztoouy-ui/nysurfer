@@ -64,7 +64,7 @@ function degToDirection(deg) {
 async function getSurfData() {
     const spot = document.getElementById('spot').value;
     const { lat, lon } = spots[spot];
-    const url = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period,wind_speed,wind_direction&timezone=auto`;
+    const url = `https://www.weather.go.kr/w/ocean/prediction/nwp.do`;
     const res = await fetch(url);
     const data = await res.json();
 
@@ -153,4 +153,5 @@ function matchBoard(h, p, wd, ws) {
 }
 </script>
 </body>
+
 </html>
